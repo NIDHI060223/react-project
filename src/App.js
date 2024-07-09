@@ -7,6 +7,7 @@ import About from './About';
 import Shop from './Shop';
 import Contact from './Contact';
 import Singlepage from './Singlepage';
+import Clothsinglepage from './Clothsinglepage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
          <Route path='/shop' element={<Shop/>}/>
          <Route path='/contact' element={<Contact/>}/>
          <Route path='/go-shop/:id' element={<Singlepage/>}/>
+         <Route path='/view-cloth/:id' element={<Clothsinglepage/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>
