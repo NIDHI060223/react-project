@@ -8,6 +8,7 @@ import Shop from './Shop';
 import Contact from './Contact';
 import Singlepage from './Singlepage';
 import Clothsinglepage from './Clothsinglepage';
+import AddCart from './AddCart';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
          <Route path='/contact' element={<Contact/>}/>
          <Route path='/go-shop/:id' element={<Singlepage/>}/>
          <Route path='/view-cloth/:id' element={<Clothsinglepage/>}/>
+         <Route path='/add-cart' element={<AddCart/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>

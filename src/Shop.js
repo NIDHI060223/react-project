@@ -98,7 +98,7 @@ function Shop() {
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
                                         <li><Link className="btn btn-success text-white mt-2" to={`/view-cloth/${cloth.id}`}><i className="far fa-eye"></i></Link></li>
-                                        <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus"></i></a></li>
+                                        <li><Link className="btn btn-success text-white mt-2" to="/add-cart"><i className="fas fa-cart-plus"></i></Link></li>
                                     </ul>
                                 </div>
                             </div>
