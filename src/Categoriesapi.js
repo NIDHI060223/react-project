@@ -1,5 +1,0 @@
-export const Categories = [
-    {id:1, img:"./assets/img/category_img_01.jpg", name:"Watches"},
-    {id:2, img:"./assets/img/category_img_02.jpg", name:"Shoes"},
-    {id:3, img:"./assets/img/category_img_03.jpg", name:"Accessories"},
-]

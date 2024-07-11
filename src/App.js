@@ -22,7 +22,7 @@ function App() {
          <Route path='/contact' element={<Contact/>}/>
          <Route path='/go-shop/:id' element={<Singlepage/>}/>
          <Route path='/view-cloth/:id' element={<Clothsinglepage/>}/>
-         <Route path='/add-cart' element={<AddCart/>}/>
+         <Route path='/add-cart/:id' element={<AddCart/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>

@@ -90,15 +90,15 @@ function Shop() {
                 </div>
                 <div className="row">
                     {Clothes.map((cloth)=>(
-                        <div className="col-md-4">
+                        <div className="col-md-4" key={cloth.id}>
                         <div className="card mb-4 product-wap rounded-0">
                             <div className="card rounded-0">
-                                <img className="card-img rounded-0 img-fluid" src={cloth.img} alt="shop1"/>
+                                <img className="card-img rounded-0 img-fluid" src={`/assets/img/${cloth.img}`} alt="shop1"/>
                                 <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
                                         <li><Link className="btn btn-success text-white mt-2" to={`/view-cloth/${cloth.id}`}><i className="far fa-eye"></i></Link></li>
-                                        <li><Link className="btn btn-success text-white mt-2" to="/add-cart"><i className="fas fa-cart-plus"></i></Link></li>
+                                        <li><Link className="btn btn-success text-white mt-2" to={`/add-cart/${cloth.id}`}><i className="fas fa-cart-plus"></i></Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@ function Shop() {
                 <div div="row">
                     <ul className="pagination pagination-lg justify-content-end">
                         <li className="page-item disabled">
-                            <a className="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#1" tabindex="-1">1</a>
+                            <a className="page-link active rounded-0 mr-3 shadow-sm border-top-0 border-left-0" href="#1" tabIndex="-1">1</a>
                         </li>
                         <li className="page-item">
                             <a className="page-link rounded-0 mr-3 shadow-sm border-top-0 border-left-0 text-dark" href="#2">2</a>
@@ -177,6 +177,8 @@ function Shop() {
                                             <div className="col-3 p-md-5">
                                                 <a href="#1"><img className="img-fluid brand-img" src="assets/img/brand_01.png" alt="Brand Logo"/></a>
                                             </div>
+
+
                                             <div className="col-3 p-md-5">
                                                 <a href="#2"><img className="img-fluid brand-img" src="assets/img/brand_02.png" alt="Brand Logo"/></a>
                                             </div>
