@@ -3,6 +3,7 @@ import { Clothes } from './Clothapi'
 import { Link } from 'react-router-dom'
 
 function Shop() {
+   
   return (
     <div>
       <div className="modal fade bg-white" id="templatemo_search" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -98,7 +99,7 @@ function Shop() {
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
                                         <li><Link className="btn btn-success text-white mt-2" to={`/view-cloth/${cloth.id}`}><i className="far fa-eye"></i></Link></li>
-                                        <li><Link className="btn btn-success text-white mt-2" to={`/add-cart/${cloth.id}`}><i className="fas fa-cart-plus"></i></Link></li>
+                                        
                                     </ul>
                                 </div>
                             </div>

@@ -66,4 +66,14 @@
   to {
     transform: rotate(360deg);
   }
+  
+}
+.form-control{
+  width:50%;
+}
+.form-label{
+  margin-left:380px;
+}
+.login{
+  width:200px;
 }

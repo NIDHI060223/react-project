@@ -1,10 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { Clothes } from './Clothapi';
+import { useCart } from './CartContext';
 
 function Clothsinglepage() {
 
     const { id } = useParams();
+    const { addToCart } = useCart(); 
     const filteredClothes = Clothes.find((cloth)=> cloth.id.toString() === id);
     console.log(filteredClothes.img)
 
@@ -19,7 +21,11 @@ function Clothsinglepage() {
                                 <div className="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul className="list-unstyled">
                                         <li><a className="btn btn-success text-white" href="shop-single.html"><i className="far fa-heart"></i></a></li>
-                                        <li><a className="btn btn-success text-white mt-2" href="shop-single.html"><i className="fas fa-cart-plus"></i></a></li>
+                                        <li>
+                                            <Link 
+                                            className="btn btn-success text-white mt-2" 
+                                            to={`/add-cart/${filteredClothes.id}`}
+                                            onClick={() => addToCart(filteredClothes)}><i className="fas fa-cart-plus"></i></Link></li>
                                     </ul>
                                 </div>
                             </div>
